@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"fish/kanban"
 )
 
 func home(w http.ResponseWriter, r *http.Request) {
@@ -22,6 +23,7 @@ func main(){
 	http.HandleFunc("/", home)
 	http.HandleFunc("/radio", radio)
 	http.HandleFunc("/api", api)
+	http.HandleFunc("/kanban", kanban.Handler)
 
 	log.Println("Go gateway listening on http://localhost:8080")
 	err := http.ListenAndServe("127.0.0.1:8080", nil)

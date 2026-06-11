@@ -16,6 +16,8 @@ type Board struct {
 		 return b.Done
 	 }
 
+	 return nil
+
  }
 
  func (b *Board) sendCard(c Card, destination string) {

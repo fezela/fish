@@ -1,8 +1,8 @@
 
-package main 
+package kanban 
 import (
 	"fmt"
-	"kanban/models"
+	"fish/kanban/models"
 
 	
 )

@@ -38,5 +38,9 @@ func (c Card) setUpdatedAt(){
 	c.UpdatedAt = time.Now()
 }
 
+func (c Card) setCreatedAt(){
+	c.CreatedAt = time.Now()
+}
+
 
 
