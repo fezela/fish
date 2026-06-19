@@ -1,10 +1,12 @@
 package models 
 
 import "time"
+	
+	
 
 type Card struct {
 	Id int //example: 1
-	Owner string
+	Owner User
 	Task string
 	Bounty int//this default to 0 allows the card to have various functions mapped to it by a numerical identifier.  It just lets it be a mutable object.
 	Status string
@@ -13,7 +15,7 @@ type Card struct {
 
 }
 
-func (c Card) GetOwner() string {
+func (c Card) GetOwner() User {
 	return c.Owner
 }
 

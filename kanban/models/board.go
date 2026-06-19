@@ -20,7 +20,7 @@ type Board struct {
 
  }
 
- func (b *Board) sendCard(c Card, destination string) {
+ func (b *Board) AddCard(c Card, destination string) {
 	switch destination {
 	case "Backlog":
 		c.setStatus("Backlog")
