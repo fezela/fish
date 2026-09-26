@@ -26,7 +26,7 @@ func main(){
 	http.HandleFunc("/kanban", kanban.Handler)
 
 	log.Println("Go gateway listening on http://localhost:8080")
-	err := http.ListenAndServe("127.0.0.1:8080", nil)
+	err := http.ListenAndServe("0.0.0.0:8080", nil)
 	if err != nil {
 		log.Fatal(err)
 	}
