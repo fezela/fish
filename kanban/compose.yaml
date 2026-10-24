@@ -1,0 +1,19 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: kanban_postgres
+
+    environment:
+      POSTGRES_USER: kanban
+      POSTGRES_PASSWORD: change_me
+      POSTGRES_DB: kanban_db
+
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./db/init:/docker-entrypoint-initdb.d
+
+volumes:
+  postgres_data:
